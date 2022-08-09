@@ -3,6 +3,7 @@ const path = require('path');
 const dbJSON = require('./db/db.json');
 const uuid = require('./helpers/uuid');
 const fs = require('fs');
+const router = require('express').router;
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -28,13 +29,15 @@ app.get('/api/notes', (req, res) => {
   // Sending the db json to client
   res.status(200).json(dbJSON);
 
+  //travis changes
+  fs.readFile('./db/db.json', 'utf8', (err,dsa))
+//end of changes!!!
+
+
+
   // Log our request to the terminal
   console.info(`${req.method} request receivd to show Notes`);
 });
-
-
-
-
 
 app.post('/api/notes', (req, res) => {
   // Log that a POST request was received
@@ -48,7 +51,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
-      review_id: uuid(),
+      // review_id: uuid(),
     };
 
     // Obtain existing reviews
