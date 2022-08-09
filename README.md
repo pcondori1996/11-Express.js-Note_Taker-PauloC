@@ -1,7 +1,51 @@
-# 11-Express.js-Note_Taker-PauloC
-# 11 Express.js: Note Taker
+# Express.js Note Taker--PauloCondori
+Set up the routes for the noter website
 
-## Your Task
+## Description
+- I connected the routes so that the db.json could be displayed on the front end
+
+### What was your motivation?
+New material covered back-end it was new material for me and I was excited about it
+
+### Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+Back-end is not an easy concept, So all the practice I can get will help me better my knowlegde of it=
+
+### What problem does it solve?
+Fixing the routes for the note page and its display function
+
+### What did you learn?
+The smallest error can cause the web to not display or function.
+You must be patient with back-end
+
+## Table of Contents 
+
+-[Installation](#installation)
+-[Usage/Instructions](#Usage/Instructions)
+-[Contributing](#Contributing)
+-[Test](#Test)
+-[Questions](#Questions)
+
+## Installation
+Run node server.js and test it out
+
+## Usage/Instructions
+
+## Example
+![ReadMe Example](./Assets/11-express-homework-demo-01.png)
+![ReadMe Example](./Assets/11-express-homework-demo-02.png)
+
+
+## Contributing
+- Paulo Sergio Condori Pinedo
+
+
+#Questions 
+If you have any questions about the repo, open an issue or contact me directly at paulocondori1@gmail.com. You can find more of my work at pcondori1996)
+
+🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆`
+};
+
+## INSTRUCTIONS FOR ASSIGNMENT
 
 Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
