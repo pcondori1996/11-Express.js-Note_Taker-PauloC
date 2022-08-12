@@ -29,9 +29,8 @@ app.get('/api/notes', (req, res) => {
   // Sending the db json to client
   res.status(200).json(dbJSON);
 
-  //travis changes
-  fs.readFile('./db/db.json', 'utf8', (err,dsa))
-//end of changes!!!
+
+  //end of changes!!!
 
 
 
@@ -55,27 +54,27 @@ app.post('/api/notes', (req, res) => {
     };
 
     // Obtain existing reviews
-    fs.readFile('./db/db.json', 'utf8', (err, data) => {
-      if (err) {
-        console.error(err);
-      } else {
-        // Convert string into JSON object
-        const parsedNotes = JSON.parse(data);
+    // fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    //   if (err) {
+    //     console.error(err);
+    //   } else {
+    //     // Convert string into JSON object
+    //     const parsedNotes = JSON.parse(data);
 
-        // Add a new review
-        parsedNotes.push(newNote);
+    //     // Add a new review
+    //     parsedNotes.push(newNote);
+    dbJSON.push(newNote)
+    // Write updated reviews back to the file
+    fs.writeFile(
+      './db/db.json',
+      JSON.stringify(dbJSON, null, 4),
+      (writeErr) =>
+        writeErr
+          ? console.error(writeErr)
+          : console.info('Successfully updated reviews!')
+    );
+    // }
 
-        // Write updated reviews back to the file
-        fs.writeFile(
-          './db/db.json',
-          JSON.stringify(parsedNotes, null, 4),
-          (writeErr) =>
-            writeErr
-              ? console.error(writeErr)
-              : console.info('Successfully updated reviews!')
-        );
-      }
-    });
 
     const response = {
       status: 'success',
@@ -92,6 +91,6 @@ app.post('/api/notes', (req, res) => {
 
 
 
-    app.listen(PORT, () => {
-      console.log(`App listening at http://localhost:${PORT} 🚀`)
-    });
+app.listen(PORT, () => {
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+});
